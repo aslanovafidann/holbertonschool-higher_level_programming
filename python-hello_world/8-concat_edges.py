@@ -1,2 +1,5 @@
 #!/usr/bin/python3
-print("{} {}".format("object-oriented", "programming with Python"))
+str1 = "object-oriented"
+str2 = "programming with Python"
+
+print(str1 + " " + str2)
