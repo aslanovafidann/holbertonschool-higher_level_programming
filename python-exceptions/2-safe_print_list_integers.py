@@ -6,9 +6,11 @@ def safe_print_list_integers(my_list=[], x=0):
             try:
                 print("{:d}".format(my_list[i]), end="")
                 count += 1
-            except Exception:
+            except (TypeError, ValueError):
+                # Skip non-integers silently
                 pass
-    except Exception:
+    except IndexError:
+        # When i >= len(my_list), stop iteration silently
         pass
     print()
     return count
