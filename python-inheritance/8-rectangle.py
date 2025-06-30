@@ -1,14 +1,10 @@
 #!/usr/bin/python3
-"""Module that defines Rectangle class inherited from BaseGeometry"""
+"""Module that defines BaseGeometry class with an area method"""
 
-BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
-class Rectangle(BaseGeometry):
-    """Rectangle class inherits from BaseGeometry"""
+class BaseGeometry:
+    """BaseGeometry class with unimplemented area method"""
 
-    def __init__(self, width, height):
-        """Initialize Rectangle with width and height validated"""
-        self.integer_validator("width", width)
-        self.integer_validator("height", height)
-        self.__width = width
-        self.__height = height
+    def area(self):
+        """Raise Exception for area not implemented"""
+        raise Exception("area() is not implemented")
