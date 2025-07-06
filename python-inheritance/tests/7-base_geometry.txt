@@ -1,0 +1,13 @@
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("width", 10)
+
+>>> bg.integer_validator("width", -5)
+Traceback (most recent call last):
+...
+ValueError: width must be greater than 0
+
+>>> bg.integer_validator("width", "invalid")
+Traceback (most recent call last):
+...
+TypeError: width must be an integer
