@@ -1,0 +1,2 @@
+-- SELECT FIRST NAME 
+SELECT * FROM first_table;
